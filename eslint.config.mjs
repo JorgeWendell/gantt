@@ -20,6 +20,7 @@ const eslintConfig = [
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
     },
+    files: ["**/*.{js,jsx,ts,tsx}"],
   },
 ];
 

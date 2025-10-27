@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Toaster } from "@/components/ui/sonner";
 import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SURIPACK - Gantt Chart",
-  description: "SURIPACK - Gantt Chart",
+  title: "Gantt Chart - GCS",
+  description: "Gantt Chart - GCS",
 };
 
 export default function RootLayout({
@@ -23,11 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster position="bottom-center" richColors theme="light" />
       </body>
     </html>
   );
